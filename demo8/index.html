@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" src="./index.js" defer></script>
+  </head>
+  <body>
+    <h1>Demo Custom Tags</h1>
+    <codingdude-gravatar email="devop@coding-dude.com"></codingdude-gravatar>
+    <br />
+    <codingdude-gravatar id="customEle2"></codingdude-gravatar>
+    <script>
+      setTimeout(() => {
+        const customEle2 = document.getElementById("customEle2");
+        document.body.removeChild(customEle2);
+      }, 5000);
+    </script>
+  </body>
+</html>
+
+<!-- https://code.tutsplus.com/tutorials/extending-the-html-by-creating-custom-tags--cms-28622 -->

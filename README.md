@@ -8,6 +8,8 @@ https://matthewjamestaylor.com/custom-tags#:~:text=Custom%20HTML%20tags%20are%20
 
 https://github.com/keanulee/good-map/blob/master/good-map.js
 
+https://code.tutsplus.com/tutorials/extending-the-html-by-creating-custom-tags--cms-28622
+
 ## Top 10 Rules For Using Custom HTML Tags:
 
 1. Always follow the naming rules for custom tags.
