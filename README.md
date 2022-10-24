@@ -6,6 +6,8 @@ https://blog.csdn.net/liuyinggui163/article/details/125226762
 
 https://matthewjamestaylor.com/custom-tags#:~:text=Custom%20HTML%20tags%20are%20supported,level%20like%20a%20.
 
+https://github.com/keanulee/good-map/blob/master/good-map.js
+
 ## Top 10 Rules For Using Custom HTML Tags:
 
 1. Always follow the naming rules for custom tags.
