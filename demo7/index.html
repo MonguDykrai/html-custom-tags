@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class WelcomeLoading extends HTMLElement {
+        constructor() {
+          super();
+          const shadow = this.attachShadow({ mode: "open" });
+          this.shadowRoot.innerHTML = `
+						<div
+							class="StyleSkeletonCurtain"
+							id="StyleSkeletonCurtain"
+							style="
+								position: fixed;
+								top: 0;
+								right: 0;
+								bottom: 0;
+								left: 0;
+								z-index: 8000;
+								font-size: 14px;
+								background: #fff;
+								user-select: none;
+								"
+							>
+							<main
+								style="
+								position: absolute;
+								top: 50%;
+								display: flex;
+								flex-wrap: wrap;
+								justify-content: center;
+								width: 100%;
+								transform: translateY(-56%);
+								"
+							>
+								<img style="display: block; border-style: none" />
+							</main>
+							<footer
+								style="
+								position: absolute;
+								right: 0;
+								bottom: 0;
+								left: 0;
+								padding-bottom: 36px;
+								color: #999;
+								text-align: center;
+								"
+							>
+								Copyright © {{ COPYRIGHT_YEAR }} 上海逸焙食品 版权所有
+							</footer>
+						</div>
+          `;
+        }
+
+        connectedCallback() {
+          const CURRENT_YEAR = new Date().getFullYear();
+          const COPYRIGHT_YEAR = `2019-${CURRENT_YEAR}`;
+          const rootContainer = this.shadowRoot.querySelector(
+            "#StyleSkeletonCurtain"
+          );
+          const footer = rootContainer.querySelector("footer");
+          footer.innerHTML = `Copyright © ${COPYRIGHT_YEAR} 上海逸焙食品 版权所有`;
+          const img = rootContainer.querySelector("img");
+          img.src = "./rotate-pulsating-loading-animation.webp";
+        }
+      }
+      window.customElements.define("welcome-loading", WelcomeLoading);
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <welcome-loading></welcome-loading>
+    </div>
+  </body>
+</html>
