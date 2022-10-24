@@ -1,0 +1,11 @@
+body {
+    background-color: #999;
+}
+
+my-element {
+    color: blue;
+}
+
+my-element[theme="light"] {
+    background: #fff;
+}
