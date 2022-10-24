@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checked" checked />
+    <my-element checked></my-element>
+    <script>
+      const myElement = document.querySelector("my-element");
+      console.log(myElement);
+      console.log(myElement.hasAttribute("checked"));
+    </script>
+  </body>
+</html>
+
+<!-- https://jsfiddle.net/7fax95ve/1/ -->
+
+<!-- https://stackoverflow.com/questions/38000001/is-there-a-thing-such-as-custom-boolean-attributes-in-html -->
